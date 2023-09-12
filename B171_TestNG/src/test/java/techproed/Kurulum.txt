@@ -16,3 +16,13 @@ TESTNG FRAMEWORK KULUMU:
 
     4-Pages package'ı altında locatini alacağımız sayfa için bir class oluştururuz.AmazonPage class'ı içinde
     ayrıntılı not yazıldı.
+
+    5-TestNG de temel test datalarımızı .properties uzantılı dosyada tutarız. Bunun için proje seviyesinde sağ klik
+    yapıp bir dosya oluştururuz. Dosyamıza isim olarak configuration.properties ismini veririz.
+    Bu dosyadaki dataları okuyabilmesi için utilities package'ı altında ConfigReader isminde bir class oluşturup
+    class içinde de belirttiğimiz gibi .properties uzantılı dosyadaki dataları test class'larımızda okuyabiliriz.
+
+    6-TestNG de test datalarını Excel'den de alabiliriz. Bunun için öncelikle pom.xml dosyamıza poi dependency'lerini
+    koyarız. Sonra Test classlarımızda her seferinde FileInputStream ve WorkBook arayüzlerini kullanmamak için
+    utilities package'ı altında ExcelReader isminde yada ExcelUtils isminde bir class oluşturup gerekli excel
+    yapısını bu class'ta oluşturup, methodlar ile satır ve sütun bilgilerine çok rahat ulaşabiliriz.
